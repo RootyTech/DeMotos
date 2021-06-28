@@ -3,7 +3,8 @@
 const path = require('path');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -43,6 +44,19 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: path.resolve('src', 'index.pug'),
+            filename: 'index.html',
+            inject: true,
+            minify: false
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve('src/pages', 'AgendarCita.pug'),
+            filename: 'AgendarCita.html',
+            inject: true,
+            minify: false
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve('src/pages', 'QuienesSomos.pug'),
+            filename: 'QuienesSomos.html',
             inject: true,
             minify: false
         }),

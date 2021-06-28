@@ -1,6 +1,4 @@
-.Title {
-    font-size: 20px;
-    font-weight: bold;
-    color: crimson;
-    text-align: center;
+.Servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
