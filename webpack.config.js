@@ -24,7 +24,7 @@ module.exports = {
                 use: { loader: 'babel-loader'}
             },
             {
-                test: /\.css|.scss$/,
+                test: /\.css|.sass$/,
                 use: [
                     MiniCSSExtractPlugin.loader,
                     'css-loader',
