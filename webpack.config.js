@@ -3,8 +3,6 @@
 const path = require('path');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -40,7 +38,7 @@ module.exports = {
     },
     plugins: [
         new MiniCSSExtractPlugin({
-            filename: 'styles/[name].[contenthash].css'
+            filename: 'styles/styles.css'
         }),
         new HtmlWebpackPlugin({
             template: path.resolve('src', 'index.pug'),
@@ -59,7 +57,6 @@ module.exports = {
             filename: 'QuienesSomos.html',
             inject: true,
             minify: false
-        }),
-        new CleanWebpackPlugin()
+        })
     ]
 };
