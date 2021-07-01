@@ -1,3 +1,4 @@
+// Animación al bajar el scrooll en las imágenes para pasarlas de blanco y negro a color
 .Brands
     display: flex
     flex-direction: column
@@ -8,11 +9,11 @@
     h3
         color: $color-gris-oscuro
         text-align: center
-    .Brands__authorized
+    .Brands__title
         font-size: 17px
         font-weight: 600
         line-height: 15px
-    .Brands__others
+    .Brands__subtitle
         font-size: 18px
         font-weight: normal
         line-height: 18px
@@ -21,21 +22,22 @@
         align-items: center
         justify-content: space-evenly
         width: 100%
+        max-width: 950px
         padding: 15px 0
-        img
-            // filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.15))
-        img:nth-child(1)
-            width: 85px
-            height: 40px
+        a
+            width: 25%
+            max-width: 150px
+            img
+                width: 100%
+        a:nth-child(1)
             &:hover
-                // background: url(./assets/Brands/Akt motos Color.png) no-repeat
-        img:nth-child(2)
-            width: 95px
-            height: 70px
+                // background-image: url('assets/Brands/Akt-motos.png')
+                // background-repeat: no-repeat
+        a:nth-child(2)
             &:hover
-                // background: url(./assets/Brands/Royal Enfield Color.png) no-repeat
-        img:nth-child(3)
-            width: 85px
-            height: 40px
+                // background-image: url('assets/Brands/Akt-motos.png')
+                // background-repeat: no-repeat
+        a:nth-child(3)
             &:hover
-                // background: url(./assets/Brands/Grupo UMA Color.png) no-repeat
+                // background-image: url('assets/Brands/Akt-motos.png')
+                // background-repeat: no-repeat
