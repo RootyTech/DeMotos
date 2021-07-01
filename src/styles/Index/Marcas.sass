@@ -1,0 +1,41 @@
+.Brands
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    padding: 15px 0
+    background: $color-gris-claro
+    h3
+        color: $color-gris-oscuro
+        text-align: center
+    .Brands__authorized
+        font-size: 17px
+        font-weight: 600
+        line-height: 15px
+    .Brands__others
+        font-size: 18px
+        font-weight: normal
+        line-height: 18px
+    .Brands__main
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        width: 100%
+        padding: 15px 0
+        img
+            // filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.15))
+        img:nth-child(1)
+            width: 85px
+            height: 40px
+            &:hover
+                // background: url(./assets/Brands/Akt motos Color.png) no-repeat
+        img:nth-child(2)
+            width: 95px
+            height: 70px
+            &:hover
+                // background: url(./assets/Brands/Royal Enfield Color.png) no-repeat
+        img:nth-child(3)
+            width: 85px
+            height: 40px
+            &:hover
+                // background: url(./assets/Brands/Grupo UMA Color.png) no-repeat
