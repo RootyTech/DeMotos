@@ -30,8 +30,23 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.png$/i,
+                include: [
+                    path.resolve(__dirname, "src/assets/Backgrounds"),
+                    path.resolve(__dirname, "src/assets/Brands")
+                ],
+                use: [
+                  {
+                    loader: 'url-loader',
+                    options: {
+                      name: "styles/[name].[ext]",
+                    },
+                  },
+                ]
             }
-        ]
+        ],
     },
     resolve: {
         extensions: ['.js'],
