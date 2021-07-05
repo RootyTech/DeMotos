@@ -5,6 +5,15 @@ header
     background-color: $color-negro-azulado
     padding: .2em 0
     .logo
-        
-    .menu
-        display: none
+    .menu__container
+        .menu
+            display: none
+@media ( min-width: $breakPoint-laptop )
+    header
+        justify-content: space-between
+        padding: .5rem 4em .5em 5em  
+        .menu__container
+            position: relative
+            .menu
+                display: flex
+                width: 23rem
