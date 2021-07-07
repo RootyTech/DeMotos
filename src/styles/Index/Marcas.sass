@@ -32,3 +32,15 @@
                 filter: grayscale(100%)
                 &:hover
                     filter: grayscale(0%)
+
+// Cuando esté por encima de la medida de escritorio (1024px) se ubica de la siguiente manera
+@media (min-width: $breakPoint-laptop)
+    .Brands
+        padding-top: 30px
+        padding-bottom: 30px
+        .Brands__title
+            font-size: 25px
+        .Brands__subtitle
+            font-size: 26px
+        .Brands__main
+            padding: 30px 0
