@@ -12,6 +12,11 @@ console.log("COMPILADO TAMBIÉN CORRECTAMENTE!");
 // ########:: ##:::: ##:. ######:: ##::. ##:. ######::: ##:::. ##:. #######::. #######:: ##::. ##: ########::. ######::
 //........:::..:::::..:::......:::..::::..:::......::::..:::::..:::.......::::.......:::..::::..::........::::......:::
 
+/** IMÁGENES PARA LAS MARCAS */
+import AKT from './assets/Brands/Akt-motos-Color.svg';
+import RoyalEnfield from './assets/Brands/Royal-Enfield-Color.svg';
+import GrupoUMA from './assets/Brands/Grupo-UMA-Color.svg';
+
 /** IMÁGENES PARA MOBILE */
 import VentaDeRepuestos from './assets/Backgrounds/VentaDeRepuestos.png';
 import Mantenimiento from './assets/Backgrounds/Mantenimiento.png';
