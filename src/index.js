@@ -1,4 +1,6 @@
 import './index.sass';
+import './styles/AgendarCita.sass';
+import './styles/QuienesSomos.sass';
 console.log("COMPILADO TAMBIÉN CORRECTAMENTE!");
 
 //'########:::::'###:::::'######::'##:::'##::'######:::'########:::'#######::'##::::'##:'##::: ##:'########:::'######::

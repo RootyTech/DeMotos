@@ -31,7 +31,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.png$/i,
+                test: /\.png|.svg$/,
                 include: [
                     path.resolve(__dirname, "src/assets/Backgrounds"),
                     path.resolve(__dirname, "src/assets/Brands")
