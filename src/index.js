@@ -10,11 +10,6 @@ console.log("COMPILADO TAMBIÉN CORRECTAMENTE!");
 // ########:: ##:::: ##:. ######:: ##::. ##:. ######::: ##:::. ##:. #######::. #######:: ##::. ##: ########::. ######::
 //........:::..:::::..:::......:::..::::..:::......::::..:::::..:::.......::::.......:::..::::..::........::::......:::
 
-
-import AKTMotos from './assets/Brands/Akt-motos.png';
-import RoyalEnfield from './assets/Brands/Royal-Enfield.png';
-import UMA from './assets/Brands/Grupo-UMA.png';
-
 /** IMÁGENES PARA MOBILE */
 import VentaDeRepuestos from './assets/Backgrounds/VentaDeRepuestos.png';
 import Mantenimiento from './assets/Backgrounds/Mantenimiento.png';
