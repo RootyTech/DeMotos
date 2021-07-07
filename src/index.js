@@ -17,6 +17,11 @@ import AKT from './assets/Brands/Akt-motos-Color.svg';
 import RoyalEnfield from './assets/Brands/Royal-Enfield-Color.svg';
 import GrupoUMA from './assets/Brands/Grupo-UMA-Color.svg';
 
+/** IMÁGENES PARA LOS TIPOS */
+import Motos from './assets/TypesMotorcycles/Motos.svg';
+import Cuatrimotos from './assets/TypesMotorcycles/Cuatrimotos.svg';
+import ThreeWheels from './assets/TypesMotorcycles/Three-Wheels.svg';
+
 /** IMÁGENES PARA MOBILE */
 import VentaDeRepuestos from './assets/Backgrounds/VentaDeRepuestos.png';
 import Mantenimiento from './assets/Backgrounds/Mantenimiento.png';
