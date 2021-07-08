@@ -39,13 +39,15 @@ import RevisionesG from './assets/Backgrounds/RevisionesG.png';
 import PinturaG from './assets/Backgrounds/PinturaG.png';
 
 /**CODIGO CAROUSEL QUIENES SOMOS */
-window.addEventListener('load', function(){
-    new Glider(document.querySelector('.carousel__elements'),{
-        slidesToShow: 1,
-        dots: '.carousel__indicators',
-        arrows: {
-            prev: '.carousel__return',
-            next: '.carousel__forward'
-        }
-    });    
-});
+if (document.querySelector('.carousel__elements')) {
+    window.addEventListener('load', function(){
+        new Glider(document.querySelector('.carousel__elements'),{
+            slidesToShow: 1,
+            dots: '.carousel__indicators',
+            arrows: {
+                prev: '.carousel__return',
+                next: '.carousel__forward'
+            }
+        });    
+    });
+}
