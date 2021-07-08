@@ -1,11 +1,23 @@
-.menu
+.menu__container
     position: fixed
     bottom: 0
     left: 0
     right: 0
     display: flex
-    justify-content: space-between
-    align-items: center
-    padding: 0 2em   
-    height: 58px
+    justify-content: center
     background-color: $color-negro-azulado
+    .menu
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0 2em   
+        height: 58px
+        width: 100%
+        max-width: 30rem
+
+@media ( min-width: $breakPoint-laptop )
+    .menu__container
+        .menu
+            display: none
+
+    

@@ -11,7 +11,6 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    mode: 'development',
     module: {
         rules: [
             {
@@ -32,10 +31,11 @@ module.exports = {
                 ]
             },
             {
-                test: /\.png$/i,
+                test: /\.png|.svg$/,
                 include: [
                     path.resolve(__dirname, "src/assets/Backgrounds"),
-                    path.resolve(__dirname, "src/assets/Brands")
+                    path.resolve(__dirname, "src/assets/Brands"),
+                    path.resolve(__dirname, "src/assets/TypesMotorcycles")
                 ],
                 use: [
                   {
@@ -62,13 +62,13 @@ module.exports = {
             minify: false
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve('src/pages', 'AgendarCita.pug'),
+            template: path.resolve('src', 'AgendarCita.pug'),
             filename: 'AgendarCita.html',
             inject: true,
             minify: false
         }),
         new HtmlWebpackPlugin({
-            template: path.resolve('src/pages', 'QuienesSomos.pug'),
+            template: path.resolve('src', 'QuienesSomos.pug'),
             filename: 'QuienesSomos.html',
             inject: true,
             minify: false

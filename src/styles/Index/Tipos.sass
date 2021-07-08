@@ -1,0 +1,60 @@
+.Types
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    background: $color-gris-types
+    .Types__title
+        padding: 10px 0
+        color: #9B9999
+        font-size: 17px
+        font-weight: normal
+        line-height: 18px
+        text-align: center
+    .Types__main
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        max-width: 1000px
+        div
+            width: 33%
+            img
+                width: 100%
+                filter: grayscale(100%)
+            .Types__mainFirstSubtitle, .Types__mainSecondSubtitle, .Types__mainThirdSubtitle
+                position: relative
+                top: -24px
+                display: none
+                align-items: center
+                justify-content: center
+                width: 100%
+                height: 1.5em
+                background: $color-negro-azulado
+                h4
+                    color: #FFFFFF
+                    font-size: 15px
+                    font-weight: bold
+                    line-height: 19px
+                    text-align: center
+            &:hover
+                img
+                    filter: grayscale(0%)
+                .Types__mainFirstSubtitle, .Types__mainSecondSubtitle, .Types__mainThirdSubtitle
+                    display: flex
+
+// Cuando esté por encima de la medida de escritorio (1024px) se ubica de la siguiente manera
+@media (min-width: $breakPoint-laptop)
+    .Types
+        .Types__title
+            padding: 25px 0
+            font-size: 24px
+            line-height: 25px
+        .Types__main
+            div
+                .Types__mainFirstSubtitle, .Types__mainSecondSubtitle, .Types__mainThirdSubtitle
+                    top: -40px
+                    height: 2.5em
+                    h4
+                        font-size: 25px
+                        line-height: 29px

@@ -29,15 +29,20 @@
             max-width: 150px
             img
                 width: 100%
-        a:nth-child(1)
-            &:hover
-                background-image: url('./assets/Brands/Akt-motos.png')
-                background-repeat: no-repeat
-        a:nth-child(2)
-            &:hover
-                background-image: url('./assets/Brands/Royal-Enfield.png')
-                background-repeat: no-repeat
-        a:nth-child(3)
-            &:hover
-                background-image: url('./assets/Brands/Grupo-UMA.png')
-                background-repeat: no-repeat
+                filter: grayscale(100%)
+                &:hover
+                    filter: grayscale(0%)
+
+// Cuando esté por encima de la medida de escritorio (1024px) se ubica de la siguiente manera
+@media (min-width: $breakPoint-laptop)
+    .Brands
+        padding-top: 30px
+        padding-bottom: 30px
+        .Brands__title
+            font-size: 25px
+            line-height: 23px
+        .Brands__subtitle
+            font-size: 26px
+            line-height: 26px
+        .Brands__main
+            padding: 30px 0
