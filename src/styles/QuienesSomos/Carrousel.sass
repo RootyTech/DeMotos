@@ -1,0 +1,35 @@
+.carousel, .carousel__elements
+    position: relative
+    width: 100%
+    height: 250px    
+    &__item, .glider-track
+        width: 100%
+        height: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__return, .carousel__forward
+        position: absolute
+        top: 45%
+        width: 30px
+        height: 30px
+        z-index: 3        
+        background-color: #cccccca1
+        border: none
+        border-radius: 300px        
+        cursor: pointer
+        i
+            color: #FFFFFF
+    &__return 
+        left: 1%
+    &__forward 
+        right: 1%
+    &__indicators
+        position: absolute
+        top: 85%
+        left: 0
+        right: 0
+        
+    
+
