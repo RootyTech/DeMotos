@@ -18,6 +18,8 @@
         width: 100%
         max-width: 1000px
         div
+            transform: translateY(0px)
+            transition: transform 0.5s
             width: 33%
             img
                 width: 100%
@@ -25,7 +27,8 @@
             .Types__mainFirstSubtitle, .Types__mainSecondSubtitle, .Types__mainThirdSubtitle
                 position: relative
                 top: -24px
-                display: none
+                opacity: 0
+                transition: opacity 0.5s
                 align-items: center
                 justify-content: center
                 width: 100%
@@ -38,10 +41,13 @@
                     line-height: 19px
                     text-align: center
             &:hover
+                transform: translateY(-20px)
+                transition: transform 0.5s
                 img
                     filter: grayscale(0%)
                 .Types__mainFirstSubtitle, .Types__mainSecondSubtitle, .Types__mainThirdSubtitle
-                    display: flex
+                    transition: opacity 0.5s
+                    opacity: 1
 
 // Cuando esté por encima de la medida de escritorio (1024px) se ubica de la siguiente manera
 @media (min-width: $breakPoint-laptop)
