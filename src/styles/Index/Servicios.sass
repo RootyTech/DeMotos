@@ -1,3 +1,13 @@
+@mixin CardDefault()
+    transform: rotateY(0deg)
+    transition: transform 1s
+    
+@mixin CardRotateY()
+    transform: rotateY(180deg)
+    transition: transform 1s
+    .Card__Back
+        animation: CardBack 0.8s forwards
+    
 .Servicios
     display: grid
     grid-template-columns: repeat(2, 45%)
@@ -7,16 +17,64 @@
     font-size: 0.875rem
     margin: 17px auto
 
-    h2, p
+    h2
         color: $color-gris-claro
+        padding: 8px 8px 0px 8px
+    p
+        color: $color-gris-claro
+        padding: 0px 8px
+
+    .Hover
+        &__Repuestos
+            grid-column: 1 / 3
+            .Card
+                @include CardDefault
+            
+            &:hover
+                .Card
+                    @include CardRotateY
+
+        &__Mantenimiento
+            grid-row: 2 / 4
+            .Card
+                @include CardDefault
+            
+            &:hover
+                .Card
+                    @include CardRotateY
+        &__PuestaPunto
+            .Card
+                @include CardDefault
+            
+            &:hover
+                .Card
+                    @include CardRotateY
+        &__Lavadero
+            .Card
+                @include CardDefault
+            
+            &:hover
+                .Card
+                    @include CardRotateY
+        &__Revision
+            .Card
+                @include CardDefault
+            
+            &:hover
+                .Card
+                    @include CardRotateY
+        &__Pintura
+            .Card
+                @include CardDefault
+            
+            &:hover
+                .Card
+                    @include CardRotateY
 
     &__Repuestos
         background-image: url('./assets/Backgrounds/VentaDeRepuestos.png')
         background-repeat: no-repeat
-        transform: rotateY(0deg)
-        transition: transform 1s
         background-size: cover
-        grid-column: 1 / 3
         height: 7.813rem
 
         .Card__Front
@@ -25,12 +83,6 @@
             align-items: center
             height: 100%
             width: 100%
-
-        &:hover
-            transform: rotateY(180deg)
-            transition: transform 1s
-            .Card__Back
-                animation: CardBack 0.8s forwards
 
     &__Mantenimiento
 
@@ -41,13 +93,13 @@
                 animation: CardBack 0.8s forwards
 
         background-image: url('./assets/Backgrounds/Mantenimiento.png')
-        grid-row: 2 / 4
         text-align: end
         background-repeat: no-repeat
         transform: rotateY(0deg)
         transition: transform 1s
         background-size: cover
         font-size: 0.75rem
+        height: 100%
     &__PuestaPunto
 
         &:hover
@@ -64,6 +116,14 @@
         transition: transform 1s
         background-size: cover
         font-size: 0.75rem
+
+        .Card__Front
+            display: flex
+            justify-content: flex-end
+
+            h2
+                width: 60%
+
     &__Lavadero
 
         &:hover
@@ -113,6 +173,12 @@
         background-size: cover
         font-size: 0.75rem
 
+        .Card__Front
+            display: flex
+            justify-content: flex-end
+
+            h2
+                width: 60%
 
 .Card
     transform-style: preserve-3d
@@ -176,16 +242,28 @@
         justify-content: center
         width: 90%
 
+        .Hover
+            &__Repuestos
+                grid-column: 1 / 6
+                grid-row: 1 / 2
+            &__Mantenimiento
+                grid-column: 6 / 9
+                grid-row: 1 / 2
+            &__PuestaPunto
+                grid-column: 1 / 3
+            &__Lavadero
+                grid-column: 3 / 5
+            &__Revision
+                grid-column: 5 / 7
+            &__Pintura
+                grid-column: 7 / 9
+
         &__Repuestos
             background-image: url('./assets/Backgrounds/VentaDeRepuestosG.png')
-            grid-column: 1 / 6
-            grid-row: 1 / 2
             .Card__Front
                 font-size: 1.05rem
         &__Mantenimiento
             background-image: url('./assets/Backgrounds/MantenimientoG.png')
-            grid-column: 6 / 9
-            grid-row: 1 / 2
             .Card__Front
                 display: flex
                 justify-content: center
@@ -196,7 +274,6 @@
                 font-size: 1.05rem
         &__PuestaPunto
             background-image: url('./assets/Backgrounds/PuestaPuntoG.png')
-            grid-column: 1 / 3
             .Card__Front
                 display: flex
                 justify-content: flex-end
@@ -207,7 +284,6 @@
                 padding: 10px
         &__Lavadero
             background-image: url('./assets/Backgrounds/LavaderoG.png')
-            grid-column: 3 / 5
             .Card__Front
                 display: flex
                 justify-content: flex-end
@@ -219,7 +295,6 @@
                 padding: 10px
         &__Revision
             background-image: url('./assets/Backgrounds/RevisionesG.png')
-            grid-column: 5 / 7
             .Card__Front
                 display: flex
                 justify-content: flex-end
@@ -230,7 +305,6 @@
                 padding: 10px
         &__Pintura
             background-image: url('./assets/Backgrounds/PinturaG.png')
-            grid-column: 7 / 9
             .Card__Front
                 display: flex
                 justify-content: flex-end
