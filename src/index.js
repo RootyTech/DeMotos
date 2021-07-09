@@ -15,7 +15,7 @@ console.log("COMPILADO TAMBIÉN CORRECTAMENTE!");
 /** IMÁGENES PARA LAS MARCAS */
 import AKT from './assets/Brands/Akt-motos-Color.svg';
 import RoyalEnfield from './assets/Brands/Royal-Enfield-Color.svg';
-import GrupoUMA from './assets/Brands/Grupo-UMA-Color.svg';
+import GrupoUMA from './assets/Brands/Grupo-UMA-Color.png';
 
 /** IMÁGENES PARA LOS TIPOS */
 import Motos from './assets/TypesMotorcycles/Motos.svg';
