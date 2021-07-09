@@ -5,7 +5,7 @@
     width: 100%
     background: $color-gris-types
     .Types__title
-        padding: 10px 0
+        padding: 15px 0
         color: #9B9999
         font-size: 17px
         font-weight: normal
@@ -17,23 +17,26 @@
         justify-content: space-between
         width: 100%
         max-width: 1000px
-        div
+        .Types__card
+            position: relative
+            width: 33%
             transform: translateY(0px)
             transition: transform 0.5s
-            width: 33%
             img
                 width: 100%
                 filter: grayscale(100%)
-            .Types__mainFirstSubtitle, .Types__mainSecondSubtitle, .Types__mainThirdSubtitle
-                position: relative
-                top: -24px
-                opacity: 0
-                transition: opacity 0.5s
-                align-items: center
-                justify-content: center
+                transition: filter 0.5s
+            .Types__cardFirstSubtitle, .Types__cardSecondSubtitle, .Types__cardThirdSubtitle
+                position: absolute
+                bottom: 0
+                display: flex
+                align-items: center /** Alinea verticalmente **/
+                justify-content: center /** Alinea horizontalmente **/
                 width: 100%
                 height: 1.5em
                 background: $color-negro-azulado
+                opacity: 0
+                transition: opacity 0.5s
                 h4
                     color: #FFFFFF
                     font-size: 15px
@@ -41,26 +44,25 @@
                     line-height: 19px
                     text-align: center
             &:hover
-                transform: translateY(-20px)
-                transition: transform 0.5s
+                transform: translateY(-10px)
                 img
                     filter: grayscale(0%)
-                .Types__mainFirstSubtitle, .Types__mainSecondSubtitle, .Types__mainThirdSubtitle
-                    transition: opacity 0.5s
+                .Types__cardFirstSubtitle, .Types__cardSecondSubtitle, .Types__cardThirdSubtitle
                     opacity: 1
 
 // Cuando esté por encima de la medida de escritorio (1024px) se ubica de la siguiente manera
 @media (min-width: $breakPoint-laptop)
     .Types
         .Types__title
-            padding: 25px 0
+            padding: 30px 0
             font-size: 24px
             line-height: 25px
         .Types__main
-            div
-                .Types__mainFirstSubtitle, .Types__mainSecondSubtitle, .Types__mainThirdSubtitle
-                    top: -40px
+            .Types__card
+                .Types__cardFirstSubtitle, .Types__cardSecondSubtitle, .Types__cardThirdSubtitle
                     height: 2.5em
                     h4
                         font-size: 25px
                         line-height: 29px
+                &:hover
+                    transform: translateY(-20px)
