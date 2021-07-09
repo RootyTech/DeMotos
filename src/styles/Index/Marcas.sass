@@ -29,8 +29,9 @@
             img
                 width: 100%
                 filter: grayscale(100%)
-                &:hover
-                    filter: grayscale(0%)
+                transition: filter 1s
+            .FadeColor
+                filter: grayscale(0%)
 
 // Cuando esté por encima de la medida de escritorio (1024px) se ubica de la siguiente manera
 @media (min-width: $breakPoint-laptop)
