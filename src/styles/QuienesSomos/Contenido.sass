@@ -1,0 +1,43 @@
+.content
+    margin: 10%
+    text-align: center
+    &__presentation
+        width: 100%
+        border-bottom: 1px solid $color-azul
+        padding-bottom: 25px
+        b
+               color: $color-azul
+    &__mission, .content__vision
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+    &__mission
+        padding: 35px 0px 40px
+        border-bottom: .5px solid $color-azul
+        .content__mission--text
+            padding-top: 8px 
+            b
+                color: $color-azul
+    &__vision
+        padding: 35px 0px 0px
+        .content__vision--text
+            padding-bottom: 8px
+            b
+               color: $color-azul  
+
+@media (min-width: $breakPoint-laptop)
+    .content
+        margin: 5%
+        text-align: center           
+        &__mission, .content__vision
+            flex-wrap: nowrap
+            justify-content: space-around
+            .content__mission--text, .content__vision--text 
+                width: 50%
+                padding-top: 0px  
+                padding-bottom: 0px
+            img
+                width: 200px
+                height: 200px
