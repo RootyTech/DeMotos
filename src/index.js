@@ -38,41 +38,17 @@ import LavaderoG from './assets/Backgrounds/LavaderoG.png';
 import RevisionesG from './assets/Backgrounds/RevisionesG.png';
 import PinturaG from './assets/Backgrounds/PinturaG.png';
 
-/**CODIGO CAROUSEL QUIENES SOMOS */
-if (document.querySelector('.carousel__elements')) {
-    window.addEventListener('load', function(){
-        new Glider(document.querySelector('.carousel__elements'),{
-            slidesToShow: 1,
-            dots: '.carousel__indicators',
-            arrows: {
-                prev: '.carousel__return',
-                next: '.carousel__forward'
-            }
-        });    
-    });
-}
+//::::::'##::::'###::::'##::::'##::::'###:::::'######:::'######::'########::'####:'########::'########:
+//:::::: ##:::'## ##::: ##:::: ##:::'## ##:::'##... ##:'##... ##: ##.... ##:. ##:: ##.... ##:... ##..::
+//:::::: ##::'##:. ##:: ##:::: ##::'##:. ##:: ##:::..:: ##:::..:: ##:::: ##:: ##:: ##:::: ##:::: ##::::
+//:::::: ##:'##:::. ##: ##:::: ##:'##:::. ##:. ######:: ##::::::: ########::: ##:: ########::::: ##::::
+//'##::: ##: #########:. ##:: ##:: #########::..... ##: ##::::::: ##.. ##:::: ##:: ##.....:::::: ##::::
+// ##::: ##: ##.... ##::. ## ##::: ##.... ##:'##::: ##: ##::: ##: ##::. ##::: ##:: ##::::::::::: ##::::
+//. ######:: ##:::: ##:::. ###:::: ##:::: ##:. ######::. ######:: ##:::. ##:'####: ##::::::::::: ##::::
+//:......:::..:::::..:::::...:::::..:::::..:::......::::......:::..:::::..::....::..::::::::::::..:::::
 
-/* CÓDIGO ANIMACIÓN INDEX -> MARCAS */
-const brands_img = document.querySelectorAll('.Brands__img');
-const windowSize = (window.innerHeight/2);
-let brands_positions=[];
+import {Carrousel} from './scripts/Carrousel'
+Carrousel();
 
-window.addEventListener('scroll', ()=>{
-    brands_positions[0]=brands_img[1].getBoundingClientRect().bottom;
-    brands_positions[1]=brands_img[1].getBoundingClientRect().top;
-
-    if(windowSize > brands_positions[1]){
-        brands_img[0].classList.add('FadeColor');
-        brands_img[1].classList.add('FadeColor');
-        brands_img[2].classList.add('FadeColor');
-    }else{
-        brands_img[0].classList.remove('FadeColor');
-        brands_img[1].classList.remove('FadeColor');
-        brands_img[2].classList.remove('FadeColor');
-    }
-    if(windowSize/2 > brands_positions[0]){
-        brands_img[0].classList.remove('FadeColor');
-        brands_img[1].classList.remove('FadeColor');
-        brands_img[2].classList.remove('FadeColor');
-    }
-})
+import {EventListener} from './scripts/Marcas';
+EventListener();
