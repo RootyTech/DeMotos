@@ -47,7 +47,14 @@ import PinturaG from './assets/Backgrounds/PinturaG.png';
 //. ######:: ##:::: ##:::. ###:::: ##:::: ##:. ######::. ######:: ##:::. ##:'####: ##::::::::::: ##::::
 //:......:::..:::::..:::::...:::::..:::::..:::......::::......:::..:::::..::....::..::::::::::::..:::::
 
-import {Carrousel} from './scripts/Carrousel'
+if (document.querySelectorAll('.BtnServicio').length) {
+    const Botones = document.querySelectorAll('.BtnServicio')
+    Botones.forEach(button => button.addEventListener('click', () => { window.location = `/AgendarCita?servicio=${button.getAttribute('id')}` }))
+}
+import {Calendly} from './scripts/Calendly';
+Calendly()
+
+import {Carrousel} from './scripts/Carrousel';
 Carrousel();
 
 import {EventListener} from './scripts/Marcas';
