@@ -4,26 +4,43 @@
     left: 0
     right: 0
     display: flex
+    flex-direction: column
     justify-content: center
-    background-color: $color-negro-azulado
+    align-items: center 
+    background-color: $color-blanco
     z-index: 10
     .menu
         display: flex
+        flex-direction: column
         justify-content: space-between
         align-items: center
         padding: 0 2em   
-        height: 58px
         width: 100%
         max-width: 30rem
         a
-            display: flex
-            justify-content: center
-            width: 2rem
 
             img
                 width: 100%
-        
 
+    .menu__button
+        width: 100%
+        height: 58px
+        display: flex
+        justify-content: center
+        align-items: center
+        button
+            width: 100%
+            height: 100%
+            background-color: $color-negro-azulado
+            border: none
+            cursor: pointer
+            img
+                width: 40px
+        button:hover
+            .menu__container
+                flex-direction: column-reverse
+
+                    
 @media ( min-width: $breakPoint-laptop )
     .menu__container
         .menu
