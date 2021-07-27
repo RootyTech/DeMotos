@@ -1,29 +1,77 @@
 .menu__container
+    z-index: 1
     position: fixed
     bottom: 0
     left: 0
     right: 0
+    top: 0
     display: flex
-    justify-content: center
-    background-color: $color-negro-azulado
-    z-index: 10
+    flex-direction: column
+    justify-content: flex-end
+    align-items: center
+    text-align: center
+    background-color: #0000007c
+    transition: flex-direction 1s
+
     .menu
         display: flex
+        flex-direction: column
         justify-content: space-between
         align-items: center
-        padding: 0 2em   
-        height: 58px
         width: 100%
-        max-width: 30rem
+        background-color: $color-blanco
+        transition: flex-direction 1s
         a
+            margin: .3rem 0
+            width: 100%
+            color: $color-gris-oscuro
+            text-decoration: none
+            font-size: 1.3rem
+            font-weight: 300
+        .active__link
+            color: $color-azul
+            font-weight: 500
+        a:first-of-type
+            margin-top: 1rem
+        a:last-of-type
             display: flex
+            align-items: center
             justify-content: center
-            width: 2rem
+            max-width: 12rem
+            height: 3rem
+            margin-bottom: 1rem
+            background-color: $color-azul
+            color: $color-blanco
+            font-weight: 600
+            border-radius: 1rem
 
+            
+
+    .menu__button
+        width: 100%
+        height: 58px
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 1s
+        background-color: $color-negro-azulado
+        button
+            width: 100%
+            height: 100%
+            border: none
+            cursor: pointer
+            background-color: black
             img
-                width: 100%
-        
+                width: 40px
+        button:hover
+            .menu__container
+                flex-direction: column-reverse
 
+    .close__button
+        background-color: $color-rojo
+   
+
+                    
 @media ( min-width: $breakPoint-laptop )
     .menu__container
         .menu
