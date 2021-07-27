@@ -4,10 +4,105 @@ header
     align-items: center
     background-color: $color-negro-azulado
     padding: .2em 0
+
     .logo
+
     .menu__container
+        z-index: 1
+        position: fixed
+        bottom: 0
+        left: 0
+        right: 0
+        top: 0
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+        text-align: center
+        background-color: transparent
+
         .menu
-            display: none
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            height: 14.063rem
+            background-color: $color-blanco
+            transform: translateY(calc(14.063rem + 3.625rem))
+            a
+                margin: .3rem 0
+                width: 100%
+                color: $color-gris-oscuro
+                text-decoration: none
+                font-size: 1.3rem
+                font-weight: 300
+            .active__link
+                color: $color-azul
+                font-weight: 500
+            a:first-of-type
+                margin-top: 1rem
+            a:last-of-type
+                display: flex
+                align-items: center
+                justify-content: center
+                max-width: 12rem
+                height: 3rem
+                margin-bottom: 1rem
+                background-color: $color-azul
+                color: $color-blanco
+                font-weight: 600
+                border-radius: 1rem
+        .is-active
+            transform: translateY(3.625rem)
+            transition: transform 1s ease
+
+
+        .menu__button
+            width: 100%
+            height: 58px
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: $color-negro-azulado        
+            border: none
+            cursor: pointer
+            transition: baground-color transform 1s
+            img
+                width: 40px
+
+            .bar, .bar::after, .bar::before
+                position: absolute
+                display: block
+                width: 3rem
+                height: .35rem
+                border-radius: .3rem;
+                background-color: $color-gris
+                transition-duration: .5s
+            .bar::after
+                content: " "
+                top: -.75rem
+            .bar::before
+                content: " "
+                top: .75rem
+
+        .close__button
+            background-color: $color-rojo
+            transform: translateY(-14.063rem)
+            .bar, .bar::after, .bar::before
+                background-color: $color-blanco
+            .bar
+                background-color: transparent
+            .bar::after
+                transform: rotate(45deg)
+                transform-origin: left
+            .bar::before
+                top: 1.34rem
+                transform: rotate(-45deg) 
+                transform-origin: left
+    .is-active
+        background-color: #0000009c;
+        transition: background-color .5s
 @media ( min-width: $breakPoint-laptop )
     header
         justify-content: space-between
