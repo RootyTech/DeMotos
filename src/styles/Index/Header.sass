@@ -67,7 +67,7 @@ header
             background-color: $color-negro-azulado        
             border: none
             cursor: pointer
-            transition: baground-color transform 1s
+            transition: all 1s
             img
                 width: 40px
 
@@ -92,14 +92,13 @@ header
             .bar, .bar::after, .bar::before
                 background-color: $color-blanco
             .bar
-                background-color: transparent
-            .bar::after
                 transform: rotate(45deg)
-                transform-origin: left
+            .bar::after
+                top: 0
+                transform: rotate(90deg)
             .bar::before
-                top: 1.34rem
-                transform: rotate(-45deg) 
-                transform-origin: left
+                top: 0
+                transform: rotate(0) 
     .is-active
         background-color: #0000009c;
         transition: background-color .5s
