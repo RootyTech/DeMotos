@@ -23,8 +23,7 @@ export function Calendi() {
         const Query = new URLSearchParams(window.location.search).get("servicio");
         if (Query) {
             if (Enlaces[Query]) {
-                const HTMLResult = Template(Enlaces[Query])
-                // document.querySelector('.Calendi__Form').innerHTML = HTMLResult;
+                Template(Enlaces[Query])
             }
         }
     }

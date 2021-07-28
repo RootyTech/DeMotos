@@ -39,11 +39,7 @@ import {Carrousel} from './scripts/Carrousel';
 Carrousel();
 
 import {EventListener} from './scripts/Marcas';
-<<<<<<< HEAD
-EventListener();
-=======
 EventListener();
 
 import {menuEvent} from './scripts/menu';
 menuEvent();
->>>>>>> 83e6dc1e3edd70cee03c069bb0cd7ea14e492b69
