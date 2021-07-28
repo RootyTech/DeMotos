@@ -55,7 +55,7 @@ header
                 border-radius: 1rem
         .is-active
             transform: translateY(3.625rem)
-            transition: transform 1s ease
+            transition: transform .7s ease
 
 
         .menu__button
@@ -67,7 +67,7 @@ header
             background-color: $color-negro-azulado        
             border: none
             cursor: pointer
-            transition: all 1s
+            transition: all .7s
             img
                 width: 40px
 
@@ -105,9 +105,49 @@ header
 @media ( min-width: $breakPoint-laptop )
     header
         justify-content: space-between
-        padding: .5rem 4em .5em 5em  
+        padding: .5rem  5em 0
+        .logo
+            margin-right: 5rem
+ 
         .menu__container
             position: relative
+            display: block
+            width: 100%
             .menu
-                display: flex
-                width: 23rem
+                flex-direction: row
+                transform: translateY(0px);
+                height: fit-content
+                background: transparent
+                a
+                    position: relative
+                    display: block
+                    margin-top: 0
+                    margin-bottom: 0
+                    color: $color-blanco
+                    font-size: 1.2rem
+                    font-weight: 400
+                    transition: color .3s
+                    height: 100%
+                /** .active__link::after
+                    content: ""
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    right: 0
+                    height: .5rem
+                    background-color: $color-blanco **/
+                a:hover
+                    color: $color-azul
+                a:first-of-type
+                    margin-top: 0
+                a:last-of-type
+                    margin-bottom: 0
+                    margin-left: 5rem
+                    transition: background-color .3s
+                a:last-of-type:hover
+                    background-color: $color-azul-oscuro
+                    color: $color-blanco
+
+            .menu__button
+                display: none
+                

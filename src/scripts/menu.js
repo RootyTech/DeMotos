@@ -9,7 +9,7 @@ export function menuEvent(){
             menu_button.classList.toggle("close__button");
             menu_container.classList.toggle("is-active");
             menu.classList.toggle("is-active");
-            menu.style.transition = "transform 1s";
+            menu.style.transition = "transform .7s";
         });
     }
 }
