@@ -57,5 +57,8 @@ Calendly()
 import {Carrousel} from './scripts/Carrousel';
 Carrousel();
 
-import {EventListener} from './scripts/Marcas';
-EventListener();
+import {eventListener} from './scripts/Marcas';
+eventListener();
+
+import { animation } from './scripts/Tipos';
+animation();

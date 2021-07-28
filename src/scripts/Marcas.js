@@ -2,7 +2,7 @@ const brands_img = document.querySelectorAll('.Brands__img');
 const windowSize = (window.innerHeight/2);
 let brands_positions=[];
 
-export const EventListener = () => {
+export const eventListener = () => {
     if (document.querySelectorAll('.Brands__img').length) {
         return window.addEventListener('scroll', ()=>{
             brands_positions[0]=brands_img[1].getBoundingClientRect().bottom;
