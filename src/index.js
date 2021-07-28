@@ -1,16 +1,6 @@
 import './index.sass';
 import './styles/AgendarCita.sass';
 import './styles/QuienesSomos.sass';
-console.log("COMPILADO TAMBIÉN CORRECTAMENTE!");
-
-//'########:::::'###:::::'######::'##:::'##::'######:::'########:::'#######::'##::::'##:'##::: ##:'########:::'######::
-// ##.... ##:::'## ##:::'##... ##: ##::'##::'##... ##:: ##.... ##:'##.... ##: ##:::: ##: ###:: ##: ##.... ##:'##... ##:
-// ##:::: ##::'##:. ##:: ##:::..:: ##:'##::: ##:::..::: ##:::: ##: ##:::: ##: ##:::: ##: ####: ##: ##:::: ##: ##:::..::
-// ########::'##:::. ##: ##::::::: #####:::: ##::'####: ########:: ##:::: ##: ##:::: ##: ## ## ##: ##:::: ##:. ######::
-// ##.... ##: #########: ##::::::: ##. ##::: ##::: ##:: ##.. ##::: ##:::: ##: ##:::: ##: ##. ####: ##:::: ##::..... ##:
-// ##:::: ##: ##.... ##: ##::: ##: ##:. ##:: ##::: ##:: ##::. ##:: ##:::: ##: ##:::: ##: ##:. ###: ##:::: ##:'##::: ##:
-// ########:: ##:::: ##:. ######:: ##::. ##:. ######::: ##:::. ##:. #######::. #######:: ##::. ##: ########::. ######::
-//........:::..:::::..:::......:::..::::..:::......::::..:::::..:::.......::::.......:::..::::..::........::::......:::
 
 /** IMÁGENES PARA LAS MARCAS */
 import AKT from './assets/Brands/Akt-motos-Color.svg';
@@ -38,21 +28,12 @@ import LavaderoG from './assets/Backgrounds/LavaderoG.png';
 import RevisionesG from './assets/Backgrounds/RevisionesG.png';
 import PinturaG from './assets/Backgrounds/PinturaG.png';
 
-//::::::'##::::'###::::'##::::'##::::'###:::::'######:::'######::'########::'####:'########::'########:
-//:::::: ##:::'## ##::: ##:::: ##:::'## ##:::'##... ##:'##... ##: ##.... ##:. ##:: ##.... ##:... ##..::
-//:::::: ##::'##:. ##:: ##:::: ##::'##:. ##:: ##:::..:: ##:::..:: ##:::: ##:: ##:: ##:::: ##:::: ##::::
-//:::::: ##:'##:::. ##: ##:::: ##:'##:::. ##:. ######:: ##::::::: ########::: ##:: ########::::: ##::::
-//'##::: ##: #########:. ##:: ##:: #########::..... ##: ##::::::: ##.. ##:::: ##:: ##.....:::::: ##::::
-// ##::: ##: ##.... ##::. ## ##::: ##.... ##:'##::: ##: ##::: ##: ##::. ##::: ##:: ##::::::::::: ##::::
-//. ######:: ##:::: ##:::. ###:::: ##:::: ##:. ######::. ######:: ##:::. ##:'####: ##::::::::::: ##::::
-//:......:::..:::::..:::::...:::::..:::::..:::......::::......:::..:::::..::....::..::::::::::::..:::::
-
 if (document.querySelectorAll('.BtnServicio').length) {
     const Botones = document.querySelectorAll('.BtnServicio')
     Botones.forEach(button => button.addEventListener('click', () => { window.location = `/AgendarCita?servicio=${button.getAttribute('id')}` }))
 }
-import {Calendly} from './scripts/Calendly';
-Calendly()
+import {Calendi} from './scripts/Calendly';
+Calendi()
 
 import {Carrousel} from './scripts/Carrousel';
 Carrousel();
@@ -60,5 +41,8 @@ Carrousel();
 import {eventListener} from './scripts/Marcas';
 eventListener();
 
-import { animation } from './scripts/Tipos';
+import {animation} from './scripts/Tipos';
 animation();
+
+import {menuEvent} from './scripts/menu';
+menuEvent();
