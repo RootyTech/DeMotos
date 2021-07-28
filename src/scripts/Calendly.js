@@ -1,9 +1,8 @@
 export function Calendi() {
     if (document.querySelector('.Calendi')) {
-        const Template = (URL) => { return `
-            <script type='text/javascript' src='https://widgets.tucalendi.com/assets/iframewidget.js')></script>
-            <script type="text/javascript">Tucalendi.initConfig({domain:"${URL}"});</script>
-        `}
+        const Template = (URL) => {
+            Tucalendi.initConfig({domain: URL});
+        }
         
         const Enlaces = {
             "mantenimiento": "demotos.tucalendi.com/citas/cita-mantenimiento",
