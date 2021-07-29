@@ -4,23 +4,34 @@ header
     align-items: center
     background-color: $color-negro-azulado
     padding: .2em 0
-
-    .logo
+    .modal
+        visibility: hidden
+        z-index: 1
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: #0000008f
+        opacity: 0
+        transition: opacity .5s
+    .modal-active
+        visibility: visible
+        opacity: 1
+        transition: opacity .5s
 
     .menu__container
-        z-index: 1
+        z-index: 2
         position: fixed
         bottom: 0
         left: 0
         right: 0
-        top: 0
         display: flex
         flex-direction: column
         justify-content: flex-end
-        align-items: center
         text-align: center
-        background-color: transparent
-
+        transform: translateY(14.063rem)
+        transition-property: transform
         .menu
             display: flex
             flex-direction: column
@@ -29,7 +40,6 @@ header
             width: 100%
             height: 14.063rem
             background-color: $color-blanco
-            transform: translateY(calc(14.063rem + 3.625rem))
             a
                 margin: .3rem 0
                 width: 100%
@@ -53,10 +63,6 @@ header
                 color: $color-blanco
                 font-weight: 600
                 border-radius: 1rem
-        .is-active
-            transform: translateY(3.625rem)
-            transition: transform .7s ease
-
 
         .menu__button
             width: 100%
@@ -67,7 +73,7 @@ header
             background-color: $color-negro-azulado        
             border: none
             cursor: pointer
-            transition: all .7s
+
             img
                 width: 40px
 
@@ -86,9 +92,8 @@ header
                 content: " "
                 top: .75rem
 
-        .close__button
+        .close-button
             background-color: $color-rojo
-            transform: translateY(-14.063rem)
             .bar, .bar::after, .bar::before
                 background-color: $color-blanco
             .bar
@@ -100,8 +105,12 @@ header
                 top: 0
                 transform: rotate(0) 
     .is-active
-        background-color: #0000009c;
-        transition: background-color .5s
+        top: 0
+        transform: translateY(0px)
+        transition: transform 1s
+
+
+        
 @media ( min-width: $breakPoint-laptop )
     header
         justify-content: space-between
@@ -113,10 +122,10 @@ header
             position: relative
             display: block
             width: 100%
+            transform: translateY(0px);
             
             .menu
                 flex-direction: row
-                transform: translateY(0px);
                 height: fit-content
                 background: transparent
                 a
@@ -129,14 +138,14 @@ header
                     font-weight: 400
                     transition: color .3s
                     height: 100%
-                /** .active__link::after
-                    content: ""
+                .active__link::after
+                    content: " "
                     position: absolute
                     bottom: 0
                     left: 0
                     right: 0
                     height: .5rem
-                    background-color: $color-blanco **/
+                    background-color: $color-blanco
                 a:hover
                     color: $color-azul
                 a:first-of-type
