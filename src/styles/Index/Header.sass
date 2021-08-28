@@ -33,6 +33,10 @@ header
         transform: translateY(14.063rem)
         transition-property: transform
         .menu
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
             width: 100%
             height: 14.063rem
             background-color: $color-blanco
@@ -53,6 +57,7 @@ header
             display: flex
             align-items: center
             justify-content: center
+            width: 100%
             max-width: 12rem
             height: 3rem
             margin-bottom: 1rem
@@ -144,6 +149,7 @@ header
                     align-items: center
                     justify-content: center
                     height: 100%
+                    width: 100%
                     margin-top: 0
                     margin-bottom: 0
                     color: $color-blanco
@@ -155,9 +161,12 @@ header
                 .active::after
                     content: " "
                     position: absolute
+                    bottom: 0
+                    left: 0
                     right: 0
                     height: .5rem
                     background-color: $color-blanco
+ 
                 a:first-of-type
                     margin-top: 0
                 .date__link
@@ -170,6 +179,7 @@ header
                 right: 0
                 padding: 0 2em
                 margin-top: .5rem;
+                width: fit-content
                 height: 3rem
                 background-color: $color-azul
                 color: $color-blanco
