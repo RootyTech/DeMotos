@@ -33,7 +33,7 @@ if (document.querySelectorAll('.BtnServicio').length) {
     Botones.forEach(button => button.addEventListener('click', () => { window.location = `/AgendarCita?servicio=${button.getAttribute('id')}` }))
 }
 import {Calendi} from './scripts/Calendly';
-Calendi()
+Calendi();
 
 import {Carrousel} from './scripts/Carrousel';
 Carrousel();
