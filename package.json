@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx webpack --watch --mode=development",
-    "start": "serve dist/",
+    "dev": "npx webpack --mode=development",
+    "serve": "serve dist/",
     "build": "npx webpack --mode=production"
   },
   "keywords": [],
