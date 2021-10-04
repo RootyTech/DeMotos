@@ -1,11 +1,17 @@
 export function Calendi() {
     if (document.querySelector('.Calendi')) {
+        
+        const Loading = document.querySelector('.lds-ring');
         const Template = (URL) => {
             Tucalendi.initConfig({domain: URL});
+            setTimeout(() => {
+                Loading.classList.add('hidden');
+            }, 5000)
         }
         
         const Enlaces = {
-            "mantenimiento": "demotos.tucalendi.com/citas/cita-mantenimiento",
+            "mantenimientoGeneral": "demotos.tucalendi.com/citas/cita-mantenimientogeneral",
+            "mantenimientoPreventivo": "demotos.tucalendi.com/citas/cita-mantenimientopreventivo",
             "lavado": "demotos.tucalendi.com/citas/cita-lavado",
             "puesta_punto": "demotos.tucalendi.com/citas/cita-puesta-punto",
             "revision_garantia": "demotos.tucalendi.com/citas/cita-revisiones-garantias",
@@ -25,6 +31,8 @@ export function Calendi() {
             if (Enlaces[Query]) {
                 Template(Enlaces[Query])
             }
+        } else {
+            Loading.classList.add('hidden');
         }
     }
 }
