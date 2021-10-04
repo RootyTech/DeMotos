@@ -41,9 +41,11 @@ header
             height: 14.063rem
             background-color: $color-blanco
             a
+                width: 100%
                 text-decoration: none
                 font-size: 1.3rem
                 font-weight: 300
+                color: $color-negro
             .active__link
                 color: $color-azul
                 font-weight: 500
@@ -114,7 +116,21 @@ header
         transform: translateY(0px)
         transition: transform 1s
 
-
+.attentionLine
+    z-index: 1
+    position: fixed
+    display: block
+    bottom: calc( 3.625rem + 1rem )
+    right: 1rem
+    color: $color-azul
+    text-decoration: none
+    width: 7rem
+    background-color: $color-blanco
+    font-size: 1.5rem
+    font-weight: 500
+    text-align: center
+    border-radius: .5rem
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
         
 @media ( min-width: $breakPoint-laptop )
     header
@@ -168,6 +184,7 @@ header
                     right: 0
                     height: .5rem
                     background-color: $color-blanco
+                    border-bottom: 2px solid $color-negro-azulado
  
                 a:first-of-type
                     margin-top: 0
@@ -185,15 +202,15 @@ header
                 height: 3rem
                 background-color: $color-azul
                 color: $color-blanco
-                transition: background-color .3s
+                transition: background-color,transform .3s
             .date__link:hover
                 background-color: $color-azul-oscuro
-            
-
+                transform: scale(.95)
             .menu__button
                 display: none
                 .bar
                     display: none
+<<<<<<< HEAD
 .attentionLine
     z-index: 1
     position: fixed
@@ -216,4 +233,12 @@ header
 
 
                 
+=======
+ 
+    .attentionLine
+        bottom: 1rem
+        transition: transform .3s
+    .attentionLine:hover
+        transform: scale(.95)
+>>>>>>> c09d3bbf833160bd0352cbea6ba6f65eb2f5a7e1
                 
