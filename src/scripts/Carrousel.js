@@ -8,7 +8,16 @@ export const Carrousel = () => {
                 arrows: {
                     prev: '.carousel__return',
                     next: '.carousel__forward'
-                }
+                },
+                responsive: [
+                    {
+                      // screens greater than >= 775px
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 2,
+                        // Set to auto and provide item width to adjust to viewport
+                    }
+                }]
             });    
         });
     }
