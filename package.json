@@ -1,19 +1,21 @@
 {
-  "name": "de_motos_medellin",
+  "name": "de_motos",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Proyecto para el taller DeMotos Medellín",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "npx webpack --mode=development",
+    "dev": "webpack --mode=development",
     "serve": "serve dist/",
-    "build": "npx webpack --mode=production"
+    "prod": "webpack --mode=production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Daniela Jurado Blandón, Santiago Restrepo Idárraga, Miguel Ángel Bedoya Bonilla, Juan Esteban Galvis, Isabela Ceballos Franco",
   "license": "ISC",
   "devDependencies": {
-    "clean-webpack-plugin": "^4.0.0-alpha.0",
-    "copy-webpack-plugin": "^9.0.1",
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.8",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.2.7",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
@@ -21,16 +23,11 @@
     "node-sass": "^6.0.1",
     "pug": "^3.0.2",
     "pug-html-loader": "^1.1.5",
+    "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
+    "serve": "^12.0.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.46.0",
     "webpack-cli": "^4.7.2"
-  },
-  "dependencies": {
-    "@babel/core": "^7.14.8",
-    "@babel/plugin-transform-runtime": "^7.14.5",
-    "@babel/preset-env": "^7.14.8",
-    "babel-loader": "^8.2.2",
-    "serve": "^12.0.0"
   }
 }

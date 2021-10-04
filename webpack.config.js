@@ -59,19 +59,19 @@ module.exports = {
             template: path.resolve('src', 'index.pug'),
             filename: 'index.html',
             inject: true,
-            minify: false
+            minify: true
         }),
         new HtmlWebpackPlugin({
             template: path.resolve('src', 'AgendarCita.pug'),
             filename: 'AgendarCita.html',
             inject: true,
-            minify: false
+            minify: true
         }),
         new HtmlWebpackPlugin({
             template: path.resolve('src', 'QuienesSomos.pug'),
             filename: 'QuienesSomos.html',
             inject: true,
-            minify: false
+            minify: true
         })
     ]
 };
