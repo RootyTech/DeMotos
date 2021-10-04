@@ -9,6 +9,7 @@ export const Carrousel = () => {
                     prev: '.carousel__return',
                     next: '.carousel__forward'
                 },
+                rewind: true,
                 responsive: [
                     {
                       // screens greater than >= 775px
