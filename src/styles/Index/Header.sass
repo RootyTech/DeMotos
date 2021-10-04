@@ -89,7 +89,7 @@ header
                 display: block
                 width: 3rem
                 height: .35rem
-                border-radius: .3rem;
+                border-radius: .3rem
                 background-color: $color-gris
                 transition-duration: .5s
             .bar::after
@@ -130,17 +130,18 @@ header
     font-weight: 500
     text-align: center
     border-radius: .5rem
-    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2)
         
 @media ( min-width: $breakPoint-laptop )
     header
         justify-content: space-between
         padding: 0 1.5rem
         height: 4rem
-        .logo
+        .home__link
+            z-index: 3
             position: absolute
             top: 0
-            margin-top: .5rem;
+            margin-top: .5rem
             margin-right: 5rem
         .modal
             display: none
@@ -151,7 +152,7 @@ header
             align-items: center
             width: 100%
             height: 100%
-            transform: translateY(0px);
+            transform: translateY(0px)
             .menu
                 flex-direction: row
                 height: 100%
@@ -174,6 +175,7 @@ header
                     transition: all .3s
                 a:hover
                     background-color: $color-negro
+                    transform: scale(.95)
                 .active::after
                     content: " "
                     position: absolute
@@ -195,7 +197,7 @@ header
                 top: 0
                 right: 0
                 padding: 0 2em
-                margin-top: .5rem;
+                margin-top: .5rem
                 width: fit-content
                 height: 3rem
                 background-color: $color-azul
@@ -208,10 +210,26 @@ header
                 display: none
                 .bar
                     display: none
- 
-    .attentionLine
-        bottom: 1rem
-        transition: transform .3s
-    .attentionLine:hover
-        transform: scale(.95)
+.attentionLine
+    z-index: 1
+    position: fixed
+    display: block
+    bottom: calc( 3.625rem + 1rem )
+    right: 1rem
+    color: $color-azul
+    text-decoration: none
+    width: 7rem
+    background-color: $color-blanco
+    font-size: 1.5rem
+    font-weight: 500
+    text-align: center
+    border-radius: .5rem
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2)
+    transition: transform .5s
+
+.attentionLine:hover
+    transform: scale(.95)
+
+
+                
                 
