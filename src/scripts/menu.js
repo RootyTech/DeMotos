@@ -55,9 +55,10 @@ export function menuEvent(){
             const Paginas = {
                 '': () => BotonesMenu[0].classList.add('active'),
                 'index.html': () => BotonesMenu[0].classList.add('active'),
-                'QuienesSomos.html': () => BotonesMenu[1].classList.add('active'), 
+                'QuienesSomos.html': () => BotonesMenu[1].classList.add('active'),
+                'index.html#maps': () => BotonesMenu[0].classList.add('active')
             }
-
+            
 
             const PaginaActual = window.location.href.split("/")[window.location.href.split("/").length-1];
             Paginas[PaginaActual]();
