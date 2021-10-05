@@ -16,8 +16,12 @@
     transition: transform 1s
     transition: transform 1s, -webkit-transform 1s
     .Card__Back
-        animation: CardIn 0.8s forwards
-        -webkit-animation: CardIn 0.8s forwards
+        -webkit-animation-fill-mode: forwards
+        animation-fill-mode: forwards
+        -webkit-animation-duration: 0.8s
+        animation-duration: 0.8s
+        -webkit-animation-name: CardIn
+        animation-name: CardIn
 
 .Servicios
     display: grid
