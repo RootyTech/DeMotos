@@ -1,9 +1,13 @@
 @mixin CardDefault()
+    -webkit-transform: rotateY(0deg)
     transform: rotateY(0deg)
+    -webkit-transition: transform 1s
     transition: transform 1s
 
 @mixin CardRotateY()
+    -webkit-transform: rotateY(180deg)
     transform: rotateY(180deg)
+    -webkit-transition: transform 1s
     transition: transform 1s
     .Card__Back
         animation: CardIn 0.8s forwards
@@ -90,7 +94,9 @@
         background-size: cover
         text-align: end
         font-size: 0.75rem
+        -webkit-transform: rotateY(0deg)
         transform: rotateY(0deg)
+        -webkit-transition: transform 1s
         transition: transform 1s
     &__PuestaPunto
         height: 7.813rem
@@ -99,7 +105,9 @@
         background-size: cover
         text-align: end
         font-size: 0.75rem
+        -webkit-transform: rotateY(0deg)
         transform: rotateY(0deg)
+        -webkit-transition: transform 1s
         transition: transform 1s
 
         .Card__Front
@@ -116,8 +124,10 @@
         background-size: cover
         text-align: end
         font-size: 0.75rem
+        -webkit-transform: rotateY(0deg)
         transform: rotateY(0deg)
         transition: transform 1s
+        -webkit-transition: transform 1s
     &__Revision
         height: 7.813rem
         background-image: url('./assets/Backgrounds/Revisiones.png')
@@ -125,7 +135,9 @@
         background-size: cover
         text-align: end
         font-size: 0.75rem
+        -webkit-transform: rotateY(0deg)
         transform: rotateY(0deg)
+        -webkit-transition: transform 1s
         transition: transform 1s
     &__Pintura
         height: 7.813rem
@@ -134,7 +146,9 @@
         background-size: cover
         text-align: end
         font-size: 0.75rem
+        -webkit-transform: rotateY(0deg)
         transform: rotateY(0deg)
+        -webkit-transition: transform 1s
         transition: transform 1s
 
         .Card__Front
@@ -147,6 +161,7 @@
 .Card
     position: relative
     transform-style: preserve-3d
+    -webkit-transform-style: preserve-3d
     &__Front
         backface-visibility: hidden
     &__Back
@@ -159,7 +174,9 @@
         width: 100%
         opacity: 0
         z-index: 3
+        -webkit-transform: rotateY(180deg)
         transform: rotateY(180deg)
+        -webkit-transition: transform 1s
         transition: transform 1s
 
         &--Oscuridad
@@ -292,7 +309,9 @@
         button
             padding: 5px 10px
             font-size: 20px
+            -webkit-transition: background-color,transform .3s
             transition: background-color,transform .3s
             &:hover
                 background-color: $color-azul-oscuro
+                -webkit-transform: scale(.95)
                 transform: scale(.95)
