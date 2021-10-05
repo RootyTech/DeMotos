@@ -22,7 +22,7 @@ export function Calendi() {
 
         Selector.addEventListener('input', (e) => {
             if (e.target.value) {
-                window.location = `/AgendarCita?servicio=${e.target.value}`
+                window.location = `/AgendarCita.html?servicio=${e.target.value}`
             }
         })
 

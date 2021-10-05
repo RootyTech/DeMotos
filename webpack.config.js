@@ -4,6 +4,9 @@ const path = require('path');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const cssMinimizer = require('css-minimizer-webpack-plugin');
+const terserPlugin = require('terser-webpack-plugin');
+
 module.exports = {
     entry: './src/index.js',
     context: path.resolve(__dirname),
@@ -73,5 +76,14 @@ module.exports = {
             inject: true,
             minify: true
         })
-    ]
+    ],
+    optimization: {
+        minimize: true,
+        minimizer: [
+            // Optimizar: CSS
+            new cssMinimizer(),
+            // Optimizar: JavaScript
+            new terserPlugin()
+        ]
+    }
 };
