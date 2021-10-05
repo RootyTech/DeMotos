@@ -30,7 +30,7 @@ import PinturaG from './assets/Backgrounds/PinturaG.png';
 
 if (document.querySelectorAll('.BtnServicio').length) {
     const Botones = document.querySelectorAll('.BtnServicio')
-    Botones.forEach(button => button.addEventListener('click', () => { window.location = `/AgendarCita?servicio=${button.getAttribute('id')}` }))
+    Botones.forEach(button => button.addEventListener('click', () => { window.location = `/AgendarCita.html?servicio=${button.getAttribute('id')}` }))
 }
 import {Calendi} from './scripts/Calendly';
 Calendi();
