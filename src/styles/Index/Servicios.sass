@@ -1,13 +1,13 @@
 @mixin CardDefault()
     transform: rotateY(0deg)
     transition: transform 1s
-    
+
 @mixin CardRotateY()
     transform: rotateY(180deg)
     transition: transform 1s
     .Card__Back
         animation: CardIn 0.8s forwards
-    
+
 .Servicios
     display: grid
     grid-template-columns: repeat(2, 45%)
@@ -37,35 +37,35 @@
             grid-row: 2 / 4
             .Card
                 @include CardDefault
-            
+
             &:hover
                 .Card
                     @include CardRotateY
         &__PuestaPunto
             .Card
                 @include CardDefault
-            
+
             &:hover
                 .Card
                     @include CardRotateY
         &__Lavadero
             .Card
                 @include CardDefault
-            
+
             &:hover
                 .Card
                     @include CardRotateY
         &__Revision
             .Card
                 @include CardDefault
-            
+
             &:hover
                 .Card
                     @include CardRotateY
         &__Pintura
             .Card
                 @include CardDefault
-            
+
             &:hover
                 .Card
                     @include CardRotateY
@@ -207,7 +207,6 @@
         opacity: 0.5
     100%
         opacity: 1
-          
 
 @media ( min-width: $breakPoint-laptop )
     .Servicios
@@ -287,15 +286,13 @@
                 height: 100%
                 width: 100%
                 font-size: 1.05rem
-    
+
     .Card
-         height: 15.625rem
-         &__back
-             &--Content
-                button
-                    padding: 5px 10px
-                    font-size: 20px
-                    transition: background-color,transform .3s
-                button:hover
-                    background-color: $color-azul-oscuro
-                    transform: scale(.95)
+        height: 15.625rem
+        button
+            padding: 5px 10px
+            font-size: 20px
+            transition: background-color,transform .3s
+            &:hover
+                background-color: $color-azul-oscuro
+                transform: scale(.95)
