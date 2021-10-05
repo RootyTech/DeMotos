@@ -8,8 +8,12 @@
     "serve": "serve dist/",
     "prod": "webpack --mode=production"
   },
-  "keywords": [],
-  "author": "Daniela Jurado Blandón, Santiago Restrepo Idárraga, Miguel Ángel Bedoya Bonilla, Juan Esteban Galvis, Isabela Ceballos Franco",
+  "keywords": ["Sass", "Pug"],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JuanesGalvis/DeMotos.git"
+  },
+  "author": "Equipo de trabajo",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.8",
