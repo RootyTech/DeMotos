@@ -4,9 +4,9 @@
   "description": "Proyecto para el taller DeMotos Medellín",
   "main": "src/index.js",
   "scripts": {
-    "dev": "webpack --mode=development",
+    "dev": "webpack --watch --mode=development",
     "serve": "serve dist/",
-    "prod": "webpack --mode=production"
+    "build": "webpack --mode=production"
   },
   "keywords": ["Sass", "Pug"],
   "repository": {
