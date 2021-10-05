@@ -21,9 +21,10 @@ if (document.querySelectorAll('.BtnServicio').length) {
     Botones.forEach(button => button.addEventListener('click', () => { window.location = `/AgendarCita.html?servicio=${button.getAttribute('id')}` }))
 }
 
+import { Calendi } from './scripts/Calendly'
 if (document.querySelector('.Calendi')) {
     import('./styles/AgendarCita.sass');
-    import('./scripts/Calendly').then((Calendi) => Calendi.Calendi() )
+    Calendi();
 }
 
 if (document.querySelector('.carousel__elements')) {
@@ -33,10 +34,6 @@ if (document.querySelector('.carousel__elements')) {
 
 if (document.querySelectorAll('.Brands__img').length) {
     import('./scripts/Marcas').then((eventListener) => eventListener.eventListener() )
-}
-
-if (document.querySelectorAll('.Types__card').length)  {
-    import('./scripts/Tipos').then((animation) => animation.animation() )
 }
 
 if (document.querySelectorAll('.Types__card').length)  {

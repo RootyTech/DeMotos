@@ -9,13 +9,13 @@ export function Calendi() {
                 Loading.classList.add('hidden');
             }, 5000)
 
-            if (window.outerWidth <= 568) {
-                const CalendiFrame = document.querySelector('#tucalendi_iframe_root');
-                CalendiFrame.style = "display: flex;flex: 1;overflow: hidden;position: relative; height: 800px;";
-            } else {
-                const CalendiFrame = document.querySelector('#tucalendi_iframe_root');
-                CalendiFrame.style = "display: flex;flex: 1;overflow: hidden;position: relative; height: 576px;";
-            }
+            // if (window.outerWidth <= 568) {
+            //     const CalendiFrame = document.querySelector('#tucalendi_iframe_root');
+            //     CalendiFrame.style = "box-sizing: content-box; display: flex;flex: 1;overflow: hidden;position: static; height: fit-content;";
+            // } else {
+            //     const CalendiFrame = document.querySelector('#tucalendi_iframe_root');
+            //     CalendiFrame.style = "box-sizing: content-box; display: flex;flex: 1;overflow: hidden;position: static; height: fit-content;";
+            // }
 
         }
         
