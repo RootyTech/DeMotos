@@ -1,16 +1,4 @@
 import './index.sass';
-import './styles/AgendarCita.sass';
-import './styles/QuienesSomos.sass';
-
-/** IMÁGENES PARA LAS MARCAS */
-import AKT from './assets/Brands/Akt-motos-Color.svg';
-import RoyalEnfield from './assets/Brands/Royal-Enfield-Color.svg';
-import GrupoUMA from './assets/Brands/Grupo-UMA-Color.png';
-
-/** IMÁGENES PARA LOS TIPOS */
-import Motos from './assets/TypesMotorcycles/Motos.svg';
-import Cuatrimotos from './assets/TypesMotorcycles/Cuatrimotos.svg';
-import ThreeWheels from './assets/TypesMotorcycles/Three-Wheels.svg';
 
 /** IMÁGENES PARA MOBILE */
 import VentaDeRepuestos from './assets/Backgrounds/VentaDeRepuestos.png';
@@ -32,17 +20,29 @@ if (document.querySelectorAll('.BtnServicio').length) {
     const Botones = document.querySelectorAll('.BtnServicio')
     Botones.forEach(button => button.addEventListener('click', () => { window.location = `/AgendarCita.html?servicio=${button.getAttribute('id')}` }))
 }
-import {Calendi} from './scripts/Calendly';
-Calendi();
 
-import {Carrousel} from './scripts/Carrousel';
-Carrousel();
+if (document.querySelector('.Calendi')) {
+    import('./styles/AgendarCita.sass');
+    import('./scripts/Calendly').then((Calendi) => Calendi.Calendi() )
+}
 
-import {eventListener} from './scripts/Marcas';
-eventListener();
+if (document.querySelector('.carousel__elements')) {
+    import('./styles/QuienesSomos.sass');
+    import('./scripts/Carrousel').then((Carrousel) => Carrousel.Carrousel() )
+}
 
-import {animation} from './scripts/Tipos';
-animation();
+if (document.querySelectorAll('.Brands__img').length) {
+    import('./scripts/Marcas').then((eventListener) => eventListener.eventListener() )
+}
 
-import {menuEvent} from './scripts/menu';
-menuEvent();
+if (document.querySelectorAll('.Types__card').length)  {
+    import('./scripts/Tipos').then((animation) => animation.animation() )
+}
+
+if (document.querySelectorAll('.Types__card').length)  {
+    import('./scripts/Tipos').then((animation) => animation.animation() )
+}
+
+if (document.querySelector(".menu__container")) {
+    import('./scripts/menu').then((menuEvent) => menuEvent.menuEvent() )
+}

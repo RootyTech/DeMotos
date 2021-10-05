@@ -1,9 +1,9 @@
-const brands_img = document.querySelectorAll('.Brands__img');
-const windowSize = (window.innerHeight/2);
-let brands_positions=[];
 
 export const eventListener = () => {
-    if (document.querySelectorAll('.Brands__img').length) {
+    const brands_img = document.querySelectorAll('.Brands__img');
+    const windowSize = (window.innerHeight/2);
+    let brands_positions=[];
+    
         return window.addEventListener('scroll', ()=>{
             brands_positions[0]=brands_img[1].getBoundingClientRect().bottom;
             brands_positions[1]=brands_img[1].getBoundingClientRect().top;
@@ -22,5 +22,4 @@ export const eventListener = () => {
                 brands_img[2].classList.remove('FadeColor');
             }
         })
-    }
 };
