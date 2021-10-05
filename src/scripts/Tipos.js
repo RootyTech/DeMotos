@@ -1,5 +1,4 @@
 export const animation = () => {
-    if (document.querySelectorAll('.Types__card').length) {
         const x = window.matchMedia("(max-width: 1023px)");
         const types_card = document.querySelectorAll('.Types__card');
         const activators = document.querySelectorAll('.activator');
@@ -47,5 +46,4 @@ export const animation = () => {
             });
             typesObserver.observe(types_card[0]);
         }
-    }
 };

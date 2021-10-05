@@ -1,12 +1,16 @@
 export function Calendi() {
     if (document.querySelector('.Calendi')) {
-        
+
         const Loading = document.querySelector('.lds-ring');
         const Template = (URL) => {
+
             Tucalendi.initConfig({domain: URL});
             setTimeout(() => {
                 Loading.classList.add('hidden');
             }, 5000)
+
+            const CalendiFrame = document.querySelector('#tucalendi_iframe_root');
+            CalendiFrame.style = "display: flex;flex: 1;overflow: hidden;position: relative; height: 576px;";
         }
         
         const Enlaces = {

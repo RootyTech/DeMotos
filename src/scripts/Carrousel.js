@@ -1,5 +1,4 @@
 export const Carrousel = () => {
-    if (document.querySelector('.carousel__elements')) {
         return window.addEventListener('load', function(){
             console.log("EventListener ocurrió");
             new Glider(document.querySelector('.carousel__elements'),{
@@ -21,5 +20,4 @@ export const Carrousel = () => {
                 }]
             });    
         });
-    }
 }
