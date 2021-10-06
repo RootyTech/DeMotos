@@ -7,6 +7,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const cssMinimizer = require('css-minimizer-webpack-plugin');
 const terserPlugin = require('terser-webpack-plugin');
 
+const RobotstxtPlugin = require("robotstxt-webpack-plugin");
+
 module.exports = {
     entry: './src/index.js',
     context: path.resolve(__dirname),
@@ -73,7 +75,8 @@ module.exports = {
             filename: 'QuienesSomos.html',
             inject: true,
             minify: true
-        })
+        }),
+        new RobotstxtPlugin()
     ],
     optimization: {
         minimize: true,
