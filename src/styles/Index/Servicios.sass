@@ -5,10 +5,14 @@
     transition: transform 1s
 
 @mixin CardRotateY()
-    -webkit-transform: rotateY(180deg)
-    transform: rotateY(180deg)
+    -webkit-transform: scale(-1, 1)
+    transform: scale(-1, 1)
     -webkit-transition: transform 1s
     transition: transform 1s
+    .Card__Front h2, p
+        opacity: 0
+        -webkit-opacity: 0
+
     .Card__Back
         animation: CardIn 0.8s forwards
         -webkit-animation: CardIn 0.8s forwards
@@ -28,6 +32,12 @@
     p
         padding: 0px 8px
         color: $color-gris-claro
+
+    h2, p
+        opacity: 1
+        -webkit-opacity: 1
+        -webkit-transition: opacity 1s
+        transition: opacity 1s
 
     .Hover
         &__Repuestos
@@ -176,8 +186,8 @@
         opacity: 0
         -webkit-opacity: 0
         z-index: 3
-        -webkit-transform: rotateY(180deg)
-        transform: rotateY(180deg)
+        -webkit-transform: scale(-1, 1)
+        transform: scale(-1, 1)
         -webkit-transition: transform 1s
         transition: transform 1s
 
