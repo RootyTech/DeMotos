@@ -1,33 +1,21 @@
 @mixin CardDefault()
     -webkit-transform: rotateY(0deg)
     transform: rotateY(0deg)
-    -webkit-transition: -webkit-transform 1s
-    transition: -webkit-transform 1s
-    -o-transition: transform 1s
+    -webkit-transition: transform 1s
     transition: transform 1s
-    transition: transform 1s, -webkit-transform 1s
 
 @mixin CardRotateY()
     -webkit-transform: rotateY(180deg)
-            transform: rotateY(180deg)
-    -webkit-transition: -webkit-transform 1s
-    transition: -webkit-transform 1s
-    -o-transition: transform 1s
+    transform: rotateY(180deg)
+    -webkit-transition: transform 1s
     transition: transform 1s
-    transition: transform 1s, -webkit-transform 1s
     .Card__Back
-        -webkit-animation-fill-mode: forwards
-        animation-fill-mode: forwards
-        -webkit-animation-duration: 0.8s
-        animation-duration: 0.8s
-        -webkit-animation-name: CardIn
-        animation-name: CardIn
+        animation: CardIn 0.8s forwards
+        -webkit-animation: CardIn 0.8s forwards
 
 .Servicios
     display: grid
     grid-template-columns: repeat(2, 45%)
-    -webkit-box-pack: center
-    -ms-flex-pack: center
     justify-content: center
     grid-gap: 5px
     width: 100%
@@ -107,7 +95,10 @@
         background-size: cover
         text-align: end
         font-size: 0.75rem
-
+        -webkit-transform: rotateY(0deg)
+        transform: rotateY(0deg)
+        -webkit-transition: transform 1s
+        transition: transform 1s
     &__PuestaPunto
         height: 7.813rem
         background-image: url('./assets/Backgrounds/PuestaPunto.png')
@@ -115,6 +106,10 @@
         background-size: cover
         text-align: end
         font-size: 0.75rem
+        -webkit-transform: rotateY(0deg)
+        transform: rotateY(0deg)
+        -webkit-transition: transform 1s
+        transition: transform 1s
 
         .Card__Front
             display: flex
@@ -130,7 +125,10 @@
         background-size: cover
         text-align: end
         font-size: 0.75rem
-
+        -webkit-transform: rotateY(0deg)
+        transform: rotateY(0deg)
+        transition: transform 1s
+        -webkit-transition: transform 1s
     &__Revision
         height: 7.813rem
         background-image: url('./assets/Backgrounds/Revisiones.png')
@@ -138,7 +136,10 @@
         background-size: cover
         text-align: end
         font-size: 0.75rem
-        
+        -webkit-transform: rotateY(0deg)
+        transform: rotateY(0deg)
+        -webkit-transition: transform 1s
+        transition: transform 1s
     &__Pintura
         height: 7.813rem
         background-image: url('./assets/Backgrounds/Pintura.png')
@@ -146,6 +147,10 @@
         background-size: cover
         text-align: end
         font-size: 0.75rem
+        -webkit-transform: rotateY(0deg)
+        transform: rotateY(0deg)
+        -webkit-transition: transform 1s
+        transition: transform 1s
 
         .Card__Front
             display: flex
@@ -160,7 +165,6 @@
     -webkit-transform-style: preserve-3d
     &__Front
         backface-visibility: hidden
-        -webkit-backface-visibility: hidden
     &__Back
         position: absolute
         top: 0
@@ -173,12 +177,9 @@
         -webkit-opacity: 0
         z-index: 3
         -webkit-transform: rotateY(180deg)
-                transform: rotateY(180deg)
-        -webkit-transition: -webkit-transform 1s
-        transition: -webkit-transform 1s
-        -o-transition: transform 1s
+        transform: rotateY(180deg)
+        -webkit-transition: transform 1s
         transition: transform 1s
-        transition: transform 1s, -webkit-transform 1s
 
         &--Oscuridad
             position: absolute
@@ -209,6 +210,28 @@
                 border-radius: 10px
                 border: 0
                 cursor: pointer
+
+@-webkit-keyframes CardIn
+    0%
+        opacity: 0
+        -webkit-opacity: 0
+    40%
+        opacity: 0.5
+        -webkit-opacity: 0.5
+    100%
+        opacity: 1
+        -webkit-opacity: 1
+
+@-webkit-keyframes CardOut
+    0%
+        opacity: 0
+        -webkit-opacity: 0
+    40%
+        opacity: 0.5
+        -webkit-opacity: 0.5
+    100%
+        opacity: 1
+        -webkit-opacity: 1
 
 @keyframes CardIn
     0%
@@ -316,13 +339,9 @@
         button
             padding: 5px 10px
             font-size: 20px
-            -webkit-transition: background-color,-webkit-transform .3s
-            transition: background-color,-webkit-transform .3s
-            -o-transition: background-color,transform .3s
+            -webkit-transition: background-color,transform .3s
             transition: background-color,transform .3s
-            transition: background-color,transform .3s,-webkit-transform .3s
             &:hover
                 background-color: $color-azul-oscuro
                 -webkit-transform: scale(.95)
-                    -ms-transform: scale(.95)
-                        transform: scale(.95)
+                transform: scale(.95)
