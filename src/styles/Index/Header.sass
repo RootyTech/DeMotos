@@ -5,10 +5,15 @@ header
     background-color: $color-negro-azulado
     padding: .5rem 1rem
     .home__link
-        z-index: 3
         display: flex
+        opacity: 0
+        transition: opacity 2s
         img
             height: 100%
+    .over
+        z-index: 3
+        opacity: 1
+
 
     .modal
         visibility: hidden
@@ -200,6 +205,8 @@ header
  
                 a:first-of-type
                     margin-top: 0
+                a:last-of-type
+                    margin-bottom: 0
                 .date__link
                     display: none
             .date__link-active
