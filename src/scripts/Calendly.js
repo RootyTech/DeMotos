@@ -3,20 +3,11 @@ export function Calendi() {
 
         const Loading = document.querySelector('.lds-ring');
         const Template = (URL) => {
-
-            Tucalendi.initConfig({domain: URL});
+            
+            Tucalendi.initConfig({domain: URL,show_available_count:true,time_format:"12h",language:"es",primary_link_color:"#0e53ae"});
             setTimeout(() => {
                 Loading.classList.add('hidden');
             }, 5000)
-
-            // if (window.outerWidth <= 568) {
-            //     const CalendiFrame = document.querySelector('#tucalendi_iframe_root');
-            //     CalendiFrame.style = "box-sizing: content-box; display: flex;flex: 1;overflow: hidden;position: static; height: fit-content;";
-            // } else {
-            //     const CalendiFrame = document.querySelector('#tucalendi_iframe_root');
-            //     CalendiFrame.style = "box-sizing: content-box; display: flex;flex: 1;overflow: hidden;position: static; height: fit-content;";
-            // }
-
         }
         
         const Enlaces = {
@@ -26,6 +17,7 @@ export function Calendi() {
             "puesta_punto": "demotos.tucalendi.com/citas/cita-puesta-punto",
             "revision_garantia": "demotos.tucalendi.com/citas/cita-revisiones-garantias",
             "pintura_chasis": "demotos.tucalendi.com/citas/cita-pintura-chasis",
+            "general": "demotos.tucalendi.com/citas"
         };
 
         const Selector = document.querySelector('.Calendi__Select');
@@ -42,7 +34,7 @@ export function Calendi() {
                 Template(Enlaces[Query])
             }
         } else {
-            Loading.classList.add('hidden');
+            Template(Enlaces["general"])
         }
     }
 }
