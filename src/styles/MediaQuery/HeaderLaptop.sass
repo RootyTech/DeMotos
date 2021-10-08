@@ -1,0 +1,83 @@
+@media ( min-width: $breakPoint-laptop )
+    header
+        justify-content: space-between
+        padding: 0 1.5rem
+        height: 4rem
+        .home__link
+            position: absolute
+            top: 0
+            margin-top: .5rem
+            margin-right: 5rem
+        .modal
+            display: none
+ 
+        .menu__container
+            position: relative
+            flex-direction: row
+            align-items: center
+            width: 100%
+            height: 100%
+            transform: translateY(0px)
+            .menu
+                flex-direction: row
+                height: 100%
+                background: transparent
+                width: 70%
+                max-width: 50em
+                margin: 0 auto
+                a
+                    position: relative
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    height: 100%
+                    width: 100%
+                    margin-top: 0
+                    margin-bottom: 0
+                    color: $color-blanco
+                    font-size: 1.2rem
+                    font-weight: 400
+                    transition: all .3s
+                a:hover
+                    background-color: $color-negro
+                    transform: scale(.95)
+                .active::after
+                    content: " "
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    right: 0
+                    height: .5rem
+                    background-color: $color-blanco
+                    border-bottom: 2px solid $color-negro-azulado
+ 
+                a:first-of-type
+                    margin-top: 0
+                a:last-of-type
+                    margin-bottom: 0
+                .date__link
+                    display: none
+            .date__link-active
+                display: flex
+            .date__link
+                position: absolute
+                top: 0
+                right: 0
+                padding: 0 2em
+                margin-top: .5rem
+                width: fit-content
+                height: 3rem
+                background-color: $color-azul
+                color: $color-blanco
+                transition: background-color,transform .3s
+            .date__link:hover
+                background-color: $color-azul-oscuro
+                transform: scale(.95)
+            .menu__button
+                display: none
+                .bar
+                    display: none
+    .attentionLine
+        bottom: 1rem
+    .attentionLine:hover
+        transform: scale(.95)

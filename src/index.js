@@ -1,5 +1,13 @@
 import './index.sass';
 
+if ( window.outerWidth >= 1024 ) {
+    import('./styles/MediaQueryLaptop.sass');
+}
+
+if ( window.outerWidth >= 768 ) {
+    import('./styles/MediaQuery/TiposTablet.sass');
+}
+
 if ( document.querySelector('.Servicios') ) {
     import('./scripts/IMG_Servicios');
 }
@@ -8,6 +16,7 @@ if ( document.querySelector('.Servicios') ) {
 import { Calendi } from './scripts/Calendly'
 if (document.querySelector('.Calendi')) {
     import('./styles/AgendarCita.sass');
+
     Calendi();
 }
 

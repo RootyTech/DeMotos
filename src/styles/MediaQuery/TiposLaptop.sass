@@ -1,0 +1,19 @@
+// Cuando esté por encima de la medida de escritorio (1024px) se ubica de la siguiente manera
+@media (min-width: $breakPoint-laptop)
+    .Types
+        &__title
+            padding: 30px 0
+            font-size: 24px
+            line-height: 25px
+        &__card
+            &:hover
+                transform: translateY(-20px)
+                img
+                    filter: grayscale(0%)
+                .Types__Subtitle
+                    opacity: 1
+        &__Subtitle
+            height: 2.5em
+            h4
+                font-size: 25px
+                line-height: 29px
