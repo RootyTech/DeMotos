@@ -15,8 +15,10 @@ section.Servicios
         p Preventivo y general  
       .Card__Back
         .Card__Back--Content
-          button.BtnServicio#mantenimientoGeneral Agenda tu cita (General)
-          button.BtnServicio#mantenimientoPreventivo Agenda tu cita (Preventivo)
+          a(href="/AgendarCita.html?servicio=mantenimientoGeneral") 
+            button.BtnServicio#mantenimientoGeneral Agenda tu cita (General)
+          a(href="/AgendarCita.html?servicio=mantenimientoPreventivo") 
+            button.BtnServicio#mantenimientoPreventivo Agenda tu cita (Preventivo)
         .Card__Back--Oscuridad
   .Hover__PuestaPunto(onclick="")
     .Card.Servicios__PuestaPunto
@@ -24,7 +26,8 @@ section.Servicios
         h2 PUESTA A PUNTO
       .Card__Back
         .Card__Back--Content
-          button.BtnServicio#puesta_punto Agenda tu cita
+          a(href="/AgendarCita.html?servicio=puesta_punto")
+            button.BtnServicio#puesta_punto Agenda tu cita
         .Card__Back--Oscuridad
   .Hover__Lavadero(onclick="")
     .Card.Servicios__Lavadero
@@ -33,7 +36,8 @@ section.Servicios
         p tipo SPA
       .Card__Back
         .Card__Back--Content
-          button.BtnServicio#lavado Agenda tu cita
+          a(href="/AgendarCita.html?servicio=lavado")
+            button.BtnServicio#lavado Agenda tu cita
         .Card__Back--Oscuridad
   .Hover__Revision(onclick="")
     .Card.Servicios__Revision
@@ -41,7 +45,8 @@ section.Servicios
         h2 REVISIONES Y GARANTIAS
       .Card__Back
         .Card__Back--Content
-          button.BtnServicio#revision_garantia Agenda tu cita
+          a(href="/AgendarCita.html?servicio=revision_garantia")
+            button.BtnServicio#revision_garantia Agenda tu cita
         .Card__Back--Oscuridad
   .Hover__Pintura(onclick="")
     .Card.Servicios__Pintura
@@ -49,5 +54,6 @@ section.Servicios
         h2 PINTURA Y CHASIS
       .Card__Back
         .Card__Back--Content
-          button.BtnServicio#pintura_chasis Agenda tu cita
+          a(href="/AgendarCita.html?servicio=pintura_chasis")
+            button.BtnServicio#pintura_chasis Agenda tu cita
         .Card__Back--Oscuridad

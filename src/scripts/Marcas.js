@@ -21,5 +21,5 @@ export const eventListener = () => {
                 brands_img[1].classList.remove('FadeColor');
                 brands_img[2].classList.remove('FadeColor');
             }
-        })
+        }, { passive: true })
 };

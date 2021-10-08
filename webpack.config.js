@@ -36,7 +36,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.png|.svg$/,
+                test: /\.png|.svg|.webp$/,
                 include: [
                     path.resolve(__dirname, "src/assets/Backgrounds")
                 ],

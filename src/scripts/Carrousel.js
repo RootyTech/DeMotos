@@ -1,6 +1,5 @@
 export const Carrousel = () => {
         return window.addEventListener('load', function(){
-            console.log("EventListener ocurrió");
             new Glider(document.querySelector('.carousel__elements'),{
                 slidesToShow: 1,
                 dots: '.carousel__indicators',
