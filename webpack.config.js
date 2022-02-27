@@ -8,13 +8,14 @@ const cssMinimizer = require('css-minimizer-webpack-plugin');
 const terserPlugin = require('terser-webpack-plugin');
 
 const RobotstxtPlugin = require("robotstxt-webpack-plugin");
+const SiteMap = require('sitemap-webpack-plugin').default;
 
 module.exports = {
     entry: './src/index.js',
     context: path.resolve(__dirname),
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'js/[name].bundle.js'
     },
     module: {
         rules: [
@@ -76,7 +77,48 @@ module.exports = {
             inject: true,
             minify: true
         }),
-        new RobotstxtPlugin()
+        new RobotstxtPlugin(),
+        new SiteMap({
+            base: 'https://demotosmedellin.com',
+            paths: [
+                {
+                    path: '/',
+                    priority: 1,
+                },
+                {
+                    path: '/AgendarCita.html',
+                    priority: 0.8,
+                },
+                {
+                    path: '/QuienesSomos.html',
+                    priority: 0.8,
+                },
+                {
+                    path: '/AgendarCita.html?servicio=mantenimientoGeneral',
+                    priority: 0.8,
+                },
+                {
+                    path: '/AgendarCita.html?servicio=mantenimientoPreventivo',
+                    priority: 0.8,
+                },
+                {
+                    path: '/AgendarCita.html?servicio=puesta_punto',
+                    priority: 0.8,
+                },
+                {
+                    path: '/AgendarCita.html?servicio=revision_garantia',
+                    priority: 0.8,
+                },
+                {
+                    path: '/AgendarCita.html?servicio=pintura_chasis',
+                    priority: 0.8,
+                },
+            ],
+            options: {
+                filename: 'sitemap.xml'
+            }
+        })
+
     ],
     optimization: {
         minimize: true,
